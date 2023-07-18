@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Adarsh Balika's component library</h1>
@@ -16,20 +17,21 @@
     <h1>This is the biggest heading h1</h1>
     <h2>This is second biggest heading h2</h2>
     <p>This is the normal text. This is free flowing and will wrap at the end like a paragraph.</p>
+    <p>This paragraph will have a <strong>bold</strong> text.</p>
     <small>This is the smallest text</small>
 
     <hr>
 
-    <h2>@containers - They r just place holders</h2>
+    <h2>@containers</h2>
 
     <!-- Accessibility tree , how to use screen reader in web page-->
-    <h3>@fluid container</h3>
-    <div class="container-fluid">
-        This is a fluid container. It will go full width of page. With some margin.
-    </div>
+    <h3>@fluid container<h3>  
+        <!-- fluid containers are used for navbars -->
+    <div class="container">
+        This is a fluid container it will go full width of page. With some margin.</div>
 
     <h3>@center container</h3>
-    <div class="container">
+    <div class="container container-center">
         This is going to be a center container. It will go till a given width and center content.
     </div>
 
@@ -37,30 +39,31 @@
 
     <h2>@Links</h2>
 
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a> 
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary"href="/"> Secondary Link</a> 
 
     <hr>
 
     <h2>@lists</h2>
 
-    <strong>unordered list</strong>
-    <ul>
+    <h3>unordered list</h3>
+    <p>This list will not have bullets</p>
+    <ul class="list-non-bullet">
         <li>Item One</li>
         <li>Item Two</li>
         <li>Item Three</li>
 
     </ul>
 
-     <strong>unordered inline list - done using CSS</strong>
-     <ul>
-        <li>Inline Item one</li>
-        <li>Inline Item two</li>
-        <li>Inline Item three</li>
+     <h3>unordered inline list - done using CSS</h3>
+     <ul class="list-non-bullet">
+        <li class="li-inline">Inline Item One</li>
+        <li class="li-inline">Inline Item Two</li>
+        <li class="li-inline">Inline Item Three</li>
      </ul>
 
     <strong>Reverse Ordered list - reverse is done by CSS<strong>
-    <ol>
+    <ol reversed>
         <li>Milk</li>
         <li>Eggs</li>
         <li>Bread</li>
@@ -69,17 +72,19 @@
     <hr>
 
     <h2>@Navigation Links</h2>
-    <nav>
-        <div>IAmDeveloper</div>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+    <nav class="navigation">
+        <div class="nav-dev">IAmDeveloper</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="li-inline">
+                <a class="link link-active" href="/">Home</a>
             </li>
-            <li>
-                <a href="/">Projects</a>
+            <li 
+            class="li-inline">
+                <a class="link link-active" href="/">Projects</a>
             </li>
-            <li>
-                <a href="/">About</a>
+            <li 
+            class="li-inline">
+                <a class="link link-active" href="/">About</a>
             </li>
         </ul>
     </nav>
@@ -88,9 +93,9 @@
 
     <h2>@Hearder</h2>
 
-    <header>
-        <img src="images/heroine.svg" alt="">
-        <h1>heading inside Heroine</h1>
+    <header class="hero">
+        <img class="hero-img"src="images/heroine.svg" alt="">
+        <h1 class="hero-heading">Adarsh Balika the <span class="head"> Web Developer</span></h1>
     </header>
 
     <hr>
@@ -98,32 +103,47 @@
     <h2>@Section</h2>
     <p>A section is used to separate parts of pages. In marketing websites you would have seen a header followed by sections of features, team, pricing, contact info etc.</p>
 
-    <section>
+    <!-- <section>
         <h3>@ normal section</h3>
         <div>Heading inside section</div>
-    </section>
+    </section> -->
     
-    <section>
-        <h3>@ white section</h3>
-        <p>This will have white background</p>
+    <section class="section">
+        <div class="container container-center">
+        <h1>White section</h1>
+        <p>HTML is the standard markup language for Web pages.
+        With HTML you can create your own Website.
+        HTML is easy to learn - You will enjoy it!</p>
+        </div>
+        
     </section>
 
-    <section>
-        <h3>@ off white section</h3>
-        <p>This will have grey background</p>
+    <section class="section ow">
+        <div class="container container-center"><h1>Off white section</h1>
+        <p>HTML is the standard markup language for Web pages.
+        With HTML you can create your own Website.
+        HTML is easy to learn - You will enjoy it!</p>
+        </div>
+        
     </section>
 
 
     <hr>
 
-    <footer>
+    <footer class="footer">
         <!-- Never use h1 or h2 tags in footer -->
         
-        <div>Some text inside footer</div>
-        <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Whatsapp</li>
+        <div class="footer-header">Some text inside footer</div>
+        <ul class="social-links list-non-bullet">
+            <li class="li-inline">
+                <a class="link"href="/">Facebook</a>
+            </li>
+            <li class="li-inline">
+                <a class="link"href="/">Instagram</a>
+            </li>
+            <li class="li-inline">
+                <a class="link"href="/">Whatsapp</a>
+            </li>
         </ul>
     </footer>
 
