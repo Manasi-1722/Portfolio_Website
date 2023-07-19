@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    /* margin: 0; */
 }
 
 hr {
@@ -9,35 +10,55 @@ hr {
 }
 
 :root {
-    --primary-color: #d8b4fe;
-    --darkgrey: #6b7280 
+    --primary-color: rgb(204, 144, 244);
+    --darkgrey: #6b7280;
+    --light-black : rgb(63,61,86) ;
+    --off-white :rgb(243,244,246);
+    --white : rgb(255,255,255);
 }
 
 /* container */
 .container {
-    padding: 0rem 1rem;
+    padding-left: 2rem;
+    padding-right:2rem;
 }
 .container-center {
+    box-sizing: border-box;
     max-width: 700px;
     margin: auto;
 }
 
 /* links */
 .link {
+    box-sizing: border-box;
     text-decoration: none;
-    padding: 0.5;
+    padding: 0.5rem 1rem;
+    /* margin-top: 5rem;
+    margin-bottom: 1rem; */
+}
+
+.link-topmargin {
+    display: block;
+    max-width: 6.5rem;
+    margin-top: 1.5rem;
 }
 .link-primary{
-    background-color: var(--primary-color);
+    background-image: linear-gradient(160deg,#e9d5ff, #f0abfc, #c084fc);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    color: black;
+    color: var(--off-white);
+    border: 1px solid var(--primary-color);
 }
 .link-secondary {
-    color: black;
+    color: var(--primary-color);
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
     padding: 0.5rem 1rem;
+}
+
+hr {
+    margin: 1rem 6rem;
+    color: var(--light-black);
 }
 
 /* Lists */
@@ -47,35 +68,38 @@ hr {
 
 .li-inline {
     display: inline;
-    padding: 0rem 0.5rem;
+    padding: 1.5rem 0.5rem;
 }
 
 /* Navigation */
 
 .navigation {
-    background-color: var(--primary-color);
-    color: black;
+    background-image: linear-gradient(160deg,#e9d5ff, #f0abfc, #c084fc);
+    color: var(--light-black);
     padding: 1rem 2rem;
     border-bottom-left-radius: 1rem;
 }
 
 .nav-dev {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 2.4rem;
 }
 
 .navigation .link {
-    color: black;
-    ;
+    color: var(--off-white);
 }
 
 .navigation .nav-pills {
     text-align: right;
+    font-size: 1.1rem;
 }
 
 .navigation .link-active {
     font-weight: bold;
+    font-size: 1.4rem;
 }
+
+/* Header */
 
 .hero {
     padding: 2rem;
@@ -90,7 +114,7 @@ hr {
 .hero-heading {
     text-align: center;
     padding-top: 1rem;
-    color: var(--darkgrey);  
+    color: var(--light-black);  
 }
 
 .hero .hero-heading .head {
@@ -101,31 +125,62 @@ hr {
 
 .section {
     padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
 }
 .section h1{
     text-align: center;
 }
 
 .ow {
-    background-color: #f3f4f6;
+    background-color: var(--off-white);
 }
 
 /* footer */
 
 .footer {
-    background-color:var(--primary-color);
-    padding: 2rem 1rem;
+    background-image: linear-gradient(160deg,#e9d5ff, #f0abfc, #c084fc);
+    padding: 2rem 2rem;
     text-align: center;
-    color: black;
+    color: var(--off-white);
     border-top-right-radius: 1rem;
+    margin-top: 2rem;
 }
 
 .footer .link {
-    color: white;
+    color: var(--off-white);
+    background-image: linear-gradient(160deg,rgb(204, 144, 244) rgb(162, 74, 239),rgb(198, 84, 240));
+    border-radius: 0.5rem;
+    font-size: 17px;
+} 
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--light-black);
 }
 
 .footer ul {
     padding-inline-start: 0px;
+}
+
+
+/* Blogs */
+.section {
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.section h1{
+    text-align: left;
+}
+.navigation .link-active {
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 
